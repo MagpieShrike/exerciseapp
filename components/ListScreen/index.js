@@ -1,6 +1,6 @@
 /*
 
-    EXERCISE SCREEN
+    LIST SCREEN
         - receives array of exercises from COLLECTION SCREEN
         - renders them individually in a FlatList
         - passes exercise name, description, steps, <-prev, and next-> to ExerciseScreen
