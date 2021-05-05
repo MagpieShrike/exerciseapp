@@ -33,26 +33,25 @@ function ListScreen({ navigation, route }) {
     return (
         <SafeAreaView style={styles.container}>
             <BackgroundImage source={require('./727.jpg')} style={styles.image}>
-                <View>
-                <Card >
-                <View style={ styles.strip }></View>
+                <Card style={{ flex: 1 }}>
+                <View style={ styles.strip } ></View>
                     <View style={{ paddingHorizontal: 90, paddingBottom: 30 }}>
                         <Card.Title style={styles.title}>{ item.name }</Card.Title>
                         <Card.Divider />
                     </View>
-                    <View style ={{ paddingHorizontal: 30, }}>
-                        <FlatList data={item.instructions} renderItem={renderItem} />
+                    <View style ={{ paddingHorizontal: 30, flex: 1 }}>
+                        <FlatList data={item.instructions} renderItem={renderItem} showsVerticalScrollIndicator="false" style={{ flex: 1 }}/> 
+                        <Button 
+                            buttonStyle={{ backgroundColor: "#081431", width: "100%", paddingHorizontal: 10, paddingVertical:10, marginTop:20 }}
+                            titleStyle={{ color: "#41e8e2", fontWeight: "bold" }}
+                            title={`Next Exercise: ${items[nextItem].name}`} 
+                            onPress={() => navigation.push('Exercise', { item: items[nextItem], items: items })}
+                        />
+                
                     </View>
+                    
                 </Card>
-                </View>
-                <View style={styles.bottom}>
-                    <Button 
-                        buttonStyle={{ backgroundColor: "#081431", width: 450, paddingHorizontal: 10, paddingVertical:10 }}
-                        titleStyle={{ color: "#41e8e2", fontWeight: "bold" }}
-                        title={`Next Exercise: ${items[nextItem].name}`} 
-                        onPress={() => navigation.push('Exercise', { item: items[nextItem], items: items })}
-                    />
-                </View>
+                
             </BackgroundImage>
         </SafeAreaView>
     )

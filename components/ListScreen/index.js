@@ -31,7 +31,7 @@ function ListScreen({ navigation, route }) {
     return (
         <SafeAreaView style={styles.container}>
             <BackgroundImage source={require('./727.jpg')} style={styles.image}>
-                <FlatList data={items} renderItem={renderItem} />
+                <FlatList data={items} renderItem={renderItem} showsVerticalScrollIndicator="false" />
             </BackgroundImage>
         </SafeAreaView>
     )

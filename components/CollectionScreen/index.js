@@ -289,7 +289,7 @@ function CollectionScreen({ navigation, image }) {
     return (
         <SafeAreaView style={styles.container}>
             <BackgroundImage source={require('./727.jpg')} style={styles.image}>
-                <FlatList data={data} renderItem={renderItem} />
+                <FlatList data={data} renderItem={renderItem} showsVerticalScrollIndicator="false" />
             </BackgroundImage>
         </SafeAreaView>
     )
