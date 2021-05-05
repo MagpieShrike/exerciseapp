@@ -3,7 +3,7 @@ GitHub pages: https://magpieshrike.github.io/exerciseapp/
 
 Exercises from https://www.acefitness.org/education-and-resources/lifestyle/exercise-library/
 
-Uses Stack and Tab navigation.
+Uses Stack and Tab navigation. Looks and works better on mobile.
 
 ## Screens
 ### Collection
