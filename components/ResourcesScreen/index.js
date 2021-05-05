@@ -1,9 +1,23 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, SafeAreaView, View, Linking, Button } from 'react-native';
 import { Card, Text } from 'react-native-elements';
 import { BackgroundImage } from 'react-native-elements/dist/config';
+import * as WebBrowser from 'expo-web-browser';
 
 function ResourcesScreen() {
+
+    _link1 = () => {
+        Linking.openURL('https://www.webmd.com/fitness-exercise/features/fitness-beginners-guide#1');
+      };
+    _link2 = () => {
+    Linking.openURL('https://www.akxl.org/bmicalc/');
+    };
+    _link3 = () => {
+    Linking.openURL('https://www.nationaleatingdisorders.org/');
+    };
+    _link4 = () => {
+    Linking.openURL('https://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/exercise-and-stress/art-20044469');
+    };
 
     return(
         <SafeAreaView style={styles.container}>
@@ -15,8 +29,32 @@ function ResourcesScreen() {
                         <Card.Divider />
                     </View>
                     <View style ={{ paddingHorizontal: 30, }}>
-                        <Text> Content </Text>
-                    </View>
+                        <Text style={styles.sectionTitle}> Starting Out </Text>
+                        <Text> Ask your medical doctor about exercises if you have serious health issues.</Text>
+                        <Button
+                        title="Fitness 101"
+                        onPress={this._link1}
+                        style={styles.button}
+                        />
+                        <Text style={styles.sectionTitle}> Health </Text>
+                        <Text>A good workout deserves a healthy lifestyle.  If you or someone you know may need guidance,  please contact someone that can help.</Text>
+                        <Button
+                        title="Diverse BMI Calculator"
+                        onPress={this._link2}
+                        style={styles.button}
+                        />
+                        <Button
+                        title="Eating Disorders"
+                        onPress={this._link3}
+                        style={styles.button}
+                        />
+                        <Button
+                        title="Stress Management"
+                        onPress={this._link4}
+                        style={styles.button}
+                        />
+                        </View>
+
                 </Card>
             </BackgroundImage>
         </SafeAreaView>
@@ -42,16 +80,14 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 30,
     },
-    bottom: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        zIndex: 10
-    },
-    stepTitle: {
+    sectionTitle: {
         fontWeight: 'bold',
         fontSize: 20,
         paddingBottom: 5,
         color: "#081431"
+    },
+    button: {
+        marginTop: 10
     }
   });
 

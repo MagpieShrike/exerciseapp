@@ -1,4 +1,5 @@
 # Exercise App
+Exercises from https://www.acefitness.org/education-and-resources/lifestyle/exercise-library/
 
 ## Screens
 ### Collection
@@ -19,5 +20,4 @@
         - allows user to go to the previous or next exercise in the exercise list
 
 ## Issues
-        - exercise instructions extend past the viewport and do not scroll all the way
-        - exercise instructions cover the next exercise button on mobile
+        - links work on mobile but not web
